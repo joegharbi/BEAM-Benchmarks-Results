@@ -1,0 +1,54 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# R
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data analysis temporary files
+*.xlsx
+*.xls
+!results/**/*.csv
+
+# Backup files
+*.bak
+*.backup
+
+# Large data files (uncomment if needed)
+# *.json
+# results/
