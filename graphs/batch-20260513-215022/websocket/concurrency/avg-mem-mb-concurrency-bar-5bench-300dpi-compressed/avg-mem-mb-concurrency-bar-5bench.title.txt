@@ -1,0 +1,7 @@
+Avg Mem (MB) vs. Number of clients
+
+Metric: Avg Mem (MB)
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Concurrency
+Benchmarks: 5

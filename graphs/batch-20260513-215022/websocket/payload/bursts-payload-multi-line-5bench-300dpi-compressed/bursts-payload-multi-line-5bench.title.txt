@@ -1,0 +1,7 @@
+Bursts vs. Message size (KB)
+
+Metric: Bursts
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

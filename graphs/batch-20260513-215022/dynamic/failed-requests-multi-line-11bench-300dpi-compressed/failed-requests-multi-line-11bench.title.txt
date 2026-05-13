@@ -1,0 +1,8 @@
+Failed Requests vs. Total requests
+
+Detailed title: Failed Requests vs. Total requests — HTTP max workers: 100
+
+Metric: Failed Requests
+Plot type: Multi-line
+Category: Dynamic
+Benchmarks: 11

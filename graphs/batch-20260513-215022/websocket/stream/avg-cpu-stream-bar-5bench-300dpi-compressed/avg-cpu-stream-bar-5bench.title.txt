@@ -1,0 +1,7 @@
+Avg CPU (%) vs. Number of clients
+
+Metric: Avg CPU (%)
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Stream
+Benchmarks: 5

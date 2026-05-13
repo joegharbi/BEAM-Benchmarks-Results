@@ -1,0 +1,8 @@
+Total Energy (J) vs. Total requests
+
+Detailed title: Total Energy (J) vs. Total requests — HTTP max workers: 100
+
+Metric: Total Energy (J)
+Plot type: Multi-line
+Category: Dynamic
+Benchmarks: 11

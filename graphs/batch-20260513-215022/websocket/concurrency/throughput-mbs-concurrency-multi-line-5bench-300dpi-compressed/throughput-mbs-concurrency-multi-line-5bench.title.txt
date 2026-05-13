@@ -1,0 +1,7 @@
+Throughput (MB/s) vs. Number of clients
+
+Metric: Throughput (MB/s)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Concurrency
+Benchmarks: 5

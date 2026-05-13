@@ -1,0 +1,7 @@
+Rate (msg/s) vs. Number of clients
+
+Metric: Rate (msg/s)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Burst
+Benchmarks: 5

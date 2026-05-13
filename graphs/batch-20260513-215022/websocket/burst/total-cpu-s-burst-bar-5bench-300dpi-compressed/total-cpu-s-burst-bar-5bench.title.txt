@@ -1,0 +1,7 @@
+Total CPU (%*s) vs. Number of clients
+
+Metric: Total CPU (%*s)
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Burst
+Benchmarks: 5

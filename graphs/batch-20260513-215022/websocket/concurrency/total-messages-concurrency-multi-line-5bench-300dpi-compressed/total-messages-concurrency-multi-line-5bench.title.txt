@@ -1,0 +1,7 @@
+Total Messages vs. Number of clients
+
+Metric: Total Messages
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Concurrency
+Benchmarks: 5

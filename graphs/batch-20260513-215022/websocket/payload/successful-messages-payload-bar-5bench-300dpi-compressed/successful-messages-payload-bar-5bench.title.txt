@@ -1,0 +1,7 @@
+Successful Messages vs. Number of clients
+
+Metric: Successful Messages
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

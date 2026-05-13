@@ -1,0 +1,7 @@
+Max Latency (ms) vs. Number of clients
+
+Metric: Max Latency (ms)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Burst
+Benchmarks: 5

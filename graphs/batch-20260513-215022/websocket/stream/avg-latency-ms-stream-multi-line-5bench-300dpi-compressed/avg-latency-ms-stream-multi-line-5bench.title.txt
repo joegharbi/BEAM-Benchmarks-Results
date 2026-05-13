@@ -1,0 +1,7 @@
+Avg Latency (ms) vs. Number of clients
+
+Metric: Avg Latency (ms)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Stream
+Benchmarks: 5

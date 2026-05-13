@@ -1,0 +1,7 @@
+Duration (s) vs. Number of clients
+
+Metric: Duration (s)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Concurrency
+Benchmarks: 5
