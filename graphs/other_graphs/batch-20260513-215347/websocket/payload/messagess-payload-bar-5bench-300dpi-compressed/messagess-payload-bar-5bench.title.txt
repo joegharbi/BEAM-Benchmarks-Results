@@ -1,0 +1,7 @@
+Messages/s vs. Number of clients
+
+Metric: Messages/s
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

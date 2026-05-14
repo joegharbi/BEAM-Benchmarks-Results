@@ -1,0 +1,7 @@
+Max Latency (ms) vs. Message size (KB)
+
+Metric: Max Latency (ms)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

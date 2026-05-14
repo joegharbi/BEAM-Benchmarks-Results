@@ -1,0 +1,7 @@
+Failed Messages vs. Number of clients
+
+Metric: Failed Messages
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Stream
+Benchmarks: 5

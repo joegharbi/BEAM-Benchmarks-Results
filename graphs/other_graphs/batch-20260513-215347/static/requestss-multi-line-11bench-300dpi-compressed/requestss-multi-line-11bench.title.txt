@@ -1,0 +1,8 @@
+Requests/s vs. Total requests
+
+Detailed title: Requests/s vs. Total requests — HTTP max workers: 100
+
+Metric: Requests/s
+Plot type: Multi-line
+Category: Static
+Benchmarks: 11

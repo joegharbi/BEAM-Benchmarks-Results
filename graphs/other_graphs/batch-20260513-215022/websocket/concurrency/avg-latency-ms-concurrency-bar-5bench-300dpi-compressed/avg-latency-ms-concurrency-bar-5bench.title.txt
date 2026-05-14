@@ -1,0 +1,7 @@
+Avg Latency (ms) vs. Number of clients
+
+Metric: Avg Latency (ms)
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Concurrency
+Benchmarks: 5

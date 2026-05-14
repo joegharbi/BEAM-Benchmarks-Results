@@ -1,0 +1,8 @@
+Execution Time (s) vs. Total requests
+
+Detailed title: Execution Time (s) vs. Total requests — HTTP max workers: 100
+
+Metric: Execution Time (s)
+Plot type: Multi-line
+Category: Static
+Benchmarks: 11

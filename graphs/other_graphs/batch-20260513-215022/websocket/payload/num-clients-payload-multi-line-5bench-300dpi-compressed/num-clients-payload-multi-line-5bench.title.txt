@@ -1,0 +1,7 @@
+Num Clients vs. Message size (KB)
+
+Metric: Num Clients
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

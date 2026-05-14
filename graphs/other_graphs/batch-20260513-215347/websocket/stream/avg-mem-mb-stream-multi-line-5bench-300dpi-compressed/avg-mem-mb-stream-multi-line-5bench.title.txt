@@ -1,0 +1,7 @@
+Avg Mem (MB) vs. Number of clients
+
+Metric: Avg Mem (MB)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Stream
+Benchmarks: 5

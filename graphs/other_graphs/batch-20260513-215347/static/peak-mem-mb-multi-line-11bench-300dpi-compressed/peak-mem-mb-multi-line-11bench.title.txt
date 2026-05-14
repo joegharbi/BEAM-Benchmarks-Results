@@ -1,0 +1,8 @@
+Peak Mem (MB) vs. Total requests
+
+Detailed title: Peak Mem (MB) vs. Total requests — HTTP max workers: 100
+
+Metric: Peak Mem (MB)
+Plot type: Multi-line
+Category: Static
+Benchmarks: 11

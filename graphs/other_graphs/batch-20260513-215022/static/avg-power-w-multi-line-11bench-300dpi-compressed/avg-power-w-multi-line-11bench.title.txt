@@ -1,0 +1,8 @@
+Avg Power (W) vs. Total requests
+
+Detailed title: Avg Power (W) vs. Total requests — HTTP max workers: 100
+
+Metric: Avg Power (W)
+Plot type: Multi-line
+Category: Static
+Benchmarks: 11

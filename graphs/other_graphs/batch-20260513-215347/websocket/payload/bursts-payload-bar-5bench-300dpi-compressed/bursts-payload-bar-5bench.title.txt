@@ -1,0 +1,7 @@
+Bursts vs. Number of clients
+
+Metric: Bursts
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

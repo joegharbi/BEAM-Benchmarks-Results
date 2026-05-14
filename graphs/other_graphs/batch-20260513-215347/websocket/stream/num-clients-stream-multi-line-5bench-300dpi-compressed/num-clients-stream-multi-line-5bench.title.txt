@@ -1,0 +1,7 @@
+Num Clients vs. Number of clients
+
+Metric: Num Clients
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Stream
+Benchmarks: 5

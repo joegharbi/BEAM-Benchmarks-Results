@@ -1,0 +1,7 @@
+Interval (s) vs. Number of clients
+
+Metric: Interval (s)
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

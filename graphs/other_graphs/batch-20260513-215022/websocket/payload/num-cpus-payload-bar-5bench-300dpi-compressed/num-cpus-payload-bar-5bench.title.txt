@@ -1,0 +1,7 @@
+Num CPUs vs. Number of clients
+
+Metric: Num CPUs
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

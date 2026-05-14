@@ -1,0 +1,7 @@
+Message Size (KB) vs. Number of clients
+
+Metric: Message Size (KB)
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Stream
+Benchmarks: 5

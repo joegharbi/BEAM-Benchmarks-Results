@@ -1,0 +1,7 @@
+Samples vs. Number of clients
+
+Metric: Samples
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

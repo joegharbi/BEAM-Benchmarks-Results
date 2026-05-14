@@ -1,0 +1,8 @@
+Samples vs. Total requests
+
+Detailed title: Samples vs. Total requests — HTTP max workers: 100
+
+Metric: Samples
+Plot type: Multi-line
+Category: Dynamic
+Benchmarks: 11

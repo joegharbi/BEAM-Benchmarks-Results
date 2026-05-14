@@ -1,0 +1,7 @@
+Peak Mem (MB) vs. Message size (KB)
+
+Metric: Peak Mem (MB)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

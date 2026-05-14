@@ -1,0 +1,7 @@
+Bursts vs. Number of clients
+
+Metric: Bursts
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Stream
+Benchmarks: 5

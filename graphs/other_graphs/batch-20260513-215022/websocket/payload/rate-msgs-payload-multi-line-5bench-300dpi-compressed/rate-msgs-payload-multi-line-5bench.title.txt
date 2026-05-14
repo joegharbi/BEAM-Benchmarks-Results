@@ -1,0 +1,7 @@
+Rate (msg/s) vs. Message size (KB)
+
+Metric: Rate (msg/s)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

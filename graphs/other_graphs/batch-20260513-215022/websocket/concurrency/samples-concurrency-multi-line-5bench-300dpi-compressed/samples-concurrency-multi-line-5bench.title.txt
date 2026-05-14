@@ -1,0 +1,7 @@
+Samples vs. Number of clients
+
+Metric: Samples
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Concurrency
+Benchmarks: 5

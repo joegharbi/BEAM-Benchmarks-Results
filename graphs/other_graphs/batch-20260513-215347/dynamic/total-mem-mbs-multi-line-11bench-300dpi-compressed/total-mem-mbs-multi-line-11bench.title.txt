@@ -1,0 +1,8 @@
+Total Mem (MB*s) vs. Total requests
+
+Detailed title: Total Mem (MB*s) vs. Total requests — HTTP max workers: 100
+
+Metric: Total Mem (MB*s)
+Plot type: Multi-line
+Category: Dynamic
+Benchmarks: 11

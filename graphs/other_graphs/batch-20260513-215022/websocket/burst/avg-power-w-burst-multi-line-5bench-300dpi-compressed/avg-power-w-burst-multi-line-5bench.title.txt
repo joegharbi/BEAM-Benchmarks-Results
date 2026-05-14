@@ -1,0 +1,7 @@
+Avg Power (W) vs. Number of clients
+
+Metric: Avg Power (W)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Burst
+Benchmarks: 5

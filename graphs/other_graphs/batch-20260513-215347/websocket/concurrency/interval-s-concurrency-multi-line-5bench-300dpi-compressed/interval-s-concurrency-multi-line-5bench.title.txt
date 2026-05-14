@@ -1,0 +1,7 @@
+Interval (s) vs. Number of clients
+
+Metric: Interval (s)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Concurrency
+Benchmarks: 5

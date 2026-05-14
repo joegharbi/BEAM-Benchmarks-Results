@@ -1,0 +1,8 @@
+Total CPU (%*s) vs. Total requests
+
+Detailed title: Total CPU (%*s) vs. Total requests — HTTP max workers: 100
+
+Metric: Total CPU (%*s)
+Plot type: Multi-line
+Category: Static
+Benchmarks: 11

@@ -1,0 +1,7 @@
+Samples vs. Message size (KB)
+
+Metric: Samples
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

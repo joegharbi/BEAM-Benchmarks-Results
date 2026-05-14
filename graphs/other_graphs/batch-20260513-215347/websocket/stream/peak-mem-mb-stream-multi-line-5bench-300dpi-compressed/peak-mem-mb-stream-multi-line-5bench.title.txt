@@ -1,0 +1,7 @@
+Peak Mem (MB) vs. Number of clients
+
+Metric: Peak Mem (MB)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Stream
+Benchmarks: 5

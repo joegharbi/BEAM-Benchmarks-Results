@@ -1,0 +1,7 @@
+Total Energy (J) vs. Number of clients
+
+Metric: Total Energy (J)
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Burst
+Benchmarks: 5

@@ -1,0 +1,7 @@
+Avg Mem (MB) vs. Message size (KB)
+
+Metric: Avg Mem (MB)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

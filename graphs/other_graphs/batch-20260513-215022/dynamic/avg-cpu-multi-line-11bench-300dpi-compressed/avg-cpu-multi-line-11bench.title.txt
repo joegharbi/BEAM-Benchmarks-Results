@@ -1,0 +1,8 @@
+Avg CPU (%) vs. Total requests
+
+Detailed title: Avg CPU (%) vs. Total requests — HTTP max workers: 100
+
+Metric: Avg CPU (%)
+Plot type: Multi-line
+Category: Dynamic
+Benchmarks: 11

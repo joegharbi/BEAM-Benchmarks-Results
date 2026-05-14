@@ -1,0 +1,7 @@
+Failed Messages vs. Message size (KB)
+
+Metric: Failed Messages
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

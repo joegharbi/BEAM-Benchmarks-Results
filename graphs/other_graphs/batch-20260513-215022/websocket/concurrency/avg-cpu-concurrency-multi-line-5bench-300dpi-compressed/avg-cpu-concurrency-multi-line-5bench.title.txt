@@ -1,0 +1,7 @@
+Avg CPU (%) vs. Number of clients
+
+Metric: Avg CPU (%)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Concurrency
+Benchmarks: 5

@@ -1,0 +1,7 @@
+Execution Time (s) vs. Number of clients
+
+Metric: Execution Time (s)
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Burst
+Benchmarks: 5

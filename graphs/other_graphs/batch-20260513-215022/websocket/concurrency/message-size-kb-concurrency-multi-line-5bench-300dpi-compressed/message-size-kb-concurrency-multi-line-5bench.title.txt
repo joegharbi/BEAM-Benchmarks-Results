@@ -1,0 +1,7 @@
+Message Size (KB) vs. Number of clients
+
+Metric: Message Size (KB)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Concurrency
+Benchmarks: 5

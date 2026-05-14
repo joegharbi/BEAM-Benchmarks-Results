@@ -1,0 +1,8 @@
+Avg Mem (MB) vs. Total requests
+
+Detailed title: Avg Mem (MB) vs. Total requests — HTTP max workers: 100
+
+Metric: Avg Mem (MB)
+Plot type: Multi-line
+Category: Dynamic
+Benchmarks: 11

@@ -1,0 +1,7 @@
+Avg Power (W) vs. Message size (KB)
+
+Metric: Avg Power (W)
+Plot type: Multi-line
+Category: WebSocket
+WebSocket subtype: Payload
+Benchmarks: 5

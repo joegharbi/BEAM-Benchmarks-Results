@@ -1,0 +1,7 @@
+Peak CPU (%) vs. Number of clients
+
+Metric: Peak CPU (%)
+Plot type: Bar
+Category: WebSocket
+WebSocket subtype: Concurrency
+Benchmarks: 5

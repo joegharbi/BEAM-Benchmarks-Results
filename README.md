@@ -1,93 +1,116 @@
 # BEAM Web Server Benchmark Results
 
-This repository contains benchmark and energy-measurement outputs for **BEAM ecosystem web frameworks** only (Erlang, Elixir, and Gleam targets).
+This repository holds benchmark and energy-measurement outputs for **BEAM ecosystem web frameworks** (Erlang, Elixir, and Gleam targets).
 
-The data was produced with the [BEAM Web Server Benchmarks Framework](https://github.com/joegharbi/BEAM-web-server-benchmarks), with power and consumption samples collected through [Scaphandre](https://github.com/hubblo-org/scaphandre).
+Data were produced with the [BEAM Web Server Benchmarks Framework](https://github.com/joegharbi/BEAM-web-server-benchmarks). Power and consumption samples were collected with [Scaphandre](https://github.com/hubblo-org/scaphandre).
 
-## Scope Of This Repository
+## Scope of this repository
 
-- Focus: BEAM language runtime/framework comparisons (not general web server comparisons)
-- Test run directory: `results/2026-02-19_083357/`
-- Raw telemetry files: `output/` (`486` JSON files, about `36.26 MB`)
-- Processed benchmark CSVs: `46` files total
-  - `dynamic/`: `15`
-  - `static/`: `15`
-  - `websocket/`: `16`
+- **Focus:** BEAM runtime and framework comparisons (not general-purpose web server shootouts).
+- **Processed results:** timestamped runs under `results/<run-id>/` (see below).
+- **Raw telemetry:** `output/` (hundreds of Scaphandre JSON files; tens of MB on disk).
+- **Figures:** `graphs/paper_graphs/` (curated plots aligned with the paper) and `graphs/other_graphs/` (timestamped batch exports).
 
-## Frameworks Covered
+## Benchmark runs (`results/`)
 
-### HTTP (Dynamic + Static)
+Each run is a directory named `YYYY-MM-DD_HHMMSS` containing some or all of `dynamic/`, `static/`, and `websocket/`.
 
-- Elixir: Cowboy `1.16`, Phoenix `1.8`, Index `1.16`, Pure `1.16`
-- Erlang: Cowboy `27`, Yaws `26/27`, Index `23/26/27`, Pure `23/26/27`
-- Gleam: Index `1.0`, Mist `1.0`
+| Run ID | Dynamic CSVs | Static CSVs | WebSocket CSVs | Notes |
+|--------|--------------|-------------|----------------|--------|
+| `2026-05-07_142551` | 11 | 11 | 20 | Full suite |
+| `2026-05-07_234827` | 11 | 11 | 20 | Full suite (same layout as above) |
+| `2026-05-08_104424` | 11 | 0 | 0 | Dynamic-only partial rerun |
+| `2026-05-08_140359` | 0 | 11 | 0 | Static-only partial rerun |
+
+For a **single folder that contains all three categories**, use `2026-05-07_234827` or `2026-05-07_142551`. The May 8 directories are useful when you only need those slices.
+
+Per full run, expect **11** dynamic HTTP CSVs, **11** static HTTP CSVs, and **20** WebSocket CSVs (five stacks × four scenario families).
+
+## Frameworks covered (this dataset)
+
+Versions below match the `dy-`, `st-`, and `ws-` file naming in the May 2026 runs.
+
+### HTTP (dynamic + static)
+
+- **Elixir:** Cowboy `1.19.5`, Phoenix `1.8.5`, Index `1.19.5`, Pure `1.19.5`
+- **Erlang:** Cowboy `28.4.3`, Yaws `28.4.3`, Index `28.4.3`, Pure `28.4.3`
+- **Gleam:** Index `1.15.2`, Mist `1.15.2`, Pure `1.15.2`
 
 ### WebSocket
 
-- Elixir: Cowboy `1.16`, Phoenix `1.8`
-- Erlang: Cowboy `27`, Yaws `27`
+- **Elixir:** Cowboy `1.19.5`, Bandit `1.8.5`
+- **Erlang:** Cowboy `28.4.3`, Yaws `28.4.3`
+- **Gleam:** Mist `1.15.2`
 
-## Test Categories
+## Test categories
 
-### Dynamic HTTP (`results/2026-02-19_083357/dynamic/`)
+### Dynamic HTTP (`results/<run>/dynamic/`)
 
-Measures request/response throughput and efficiency for dynamic endpoints.
+Throughput and efficiency for dynamic endpoints.
 
-Key CSV metrics:
+Typical CSV columns include:
+
 - `Total/Successful/Failed Requests`
 - `Execution Time (s)` and `Requests/s`
 - `Total Energy (J)` and `Avg Power (W)`
 - CPU and memory aggregates (`Avg`, `Peak`, `Total`)
 
-### Static HTTP (`results/2026-02-19_083357/static/`)
+### Static HTTP (`results/<run>/static/`)
 
-Measures static file serving throughput and resource usage under load.
+Static file serving under load; same column schema as dynamic tests.
 
-Uses the same column schema as dynamic tests.
+### WebSocket (`results/<run>/websocket/`)
 
-### WebSocket (`results/2026-02-19_083357/websocket/`)
+Four scenario families per stack (suffix on the filename):
 
-Includes four scenario families per stack:
 - `*_burst.csv`
 - `*_concurrency.csv`
 - `*_payload.csv`
 - `*_stream.csv`
 
-Key CSV metrics:
+Typical columns include:
+
 - `Total/Successful/Failed Messages`
 - `Messages/s` and `Throughput (MB/s)`
 - `Avg/Min/Max Latency (ms)`
 - Energy, CPU, and memory aggregates
 - Scenario fields (`Pattern`, `Num Clients`, `Message Size`, `Rate`, `Bursts`, `Interval`, `Duration`)
 
-## Quick Performance Snapshot (This Dataset)
+## Quick performance snapshot
 
-These are best observed per-file peaks in the current CSV outputs:
+Peaks below are taken from **`results/2026-05-07_234827/`** (max `Requests/s` or `Messages/s` over all rows in the relevant CSVs). They are illustrative only; always check success/failure counts and load steps before ranking stacks.
 
-- Dynamic HTTP peak: `1601.60 req/s` (`dy-elixir-pure-1-16.csv`)
-- Static HTTP peak: `1604.52 req/s` (`st-elixir-pure-1-16.csv`)
-- WebSocket concurrency peak: `3007.01 msg/s` (`ws-elixir-phoenix-1-8_concurrency.csv`)
-- WebSocket stream peak: `925.88 msg/s` (`ws-elixir-cowboy-1-16_stream.csv`)
+- **Dynamic HTTP:** `1627.53 req/s` (`dy-elixir-pure-1-19-5.csv`)
+- **Static HTTP:** `1668.39 req/s` (`st-elixir-pure-1-19-5.csv`)
+- **WebSocket concurrency:** `2976.24 msg/s` (`ws-erlang-cowboy-28-4-3_concurrency.csv`)
+- **WebSocket stream:** `932.04 msg/s` (`ws-elixir-bandit-1-8-5_stream.csv`)
 
-Some stacks show high failed-request counts at larger load points, so compare both throughput and success rate when interpreting rankings.
+Some configurations show non-zero failures at aggressive load points; treat throughput together with reliability and tail latency.
 
-## Data Layout
+## Data layout
 
 ```text
 .
-├── output/                          # Raw Scaphandre JSON telemetry
+├── output/                    # Raw Scaphandre JSON telemetry (per benchmark execution)
 ├── results/
-│   └── 2026-02-19_083357/
-│       ├── dynamic/                 # HTTP dynamic benchmarks (15 CSV files)
-│       ├── static/                  # HTTP static benchmarks (15 CSV files)
-│       └── websocket/               # WebSocket benchmarks (16 CSV files)
+│   ├── 2026-05-07_142551/     # Example full run
+│   ├── 2026-05-07_234827/     # Example full run
+│   ├── 2026-05-08_104424/     # Dynamic-only partial rerun
+│   └── 2026-05-08_140359/     # Static-only partial rerun
+│       ├── dynamic/           # HTTP dynamic CSVs (when present)
+│       ├── static/            # HTTP static CSVs (when present)
+│       └── websocket/         # WebSocket CSVs (when present)
+├── graphs/
+│   ├── paper_graphs/          # Publication-oriented figures (dynamic / static / websocket)
+│   └── other_graphs/          # Additional batch outputs (timestamped subfolders)
 └── README.md
 ```
 
 ## Notes
 
-- File names encode stack/runtime/version and test family, for example:
-  - `dy-erlang-index-27.csv`
-  - `st-gleam-mist-1-0.csv`
-  - `ws-elixir-phoenix-1-8_concurrency.csv`
-- `output/*.json` contains time-series telemetry (host, consumers, sockets, and power samples) captured during each benchmark execution.
+- **File names** encode language, stack, and version, plus WebSocket scenario, for example:
+  - `dy-erlang-index-28-4-3.csv`
+  - `st-gleam-mist-1-15-2.csv`
+  - `ws-elixir-bandit-1-8-5_concurrency.csv`
+- **`output/*.json`** holds time-series telemetry (host, consumers, sockets, power samples) aligned with benchmark runs.
+- **`graphs/paper_graphs/`** groups PNGs (and companion `.title.txt` files) by test type; WebSocket plots are further split into `burst`, `concurrency`, `payload`, and `stream`.

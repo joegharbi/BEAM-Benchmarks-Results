@@ -1,0 +1,8 @@
+Peak CPU (%) vs. Total requests
+
+Detailed title: Peak CPU (%) vs. Total requests — HTTP max workers: 100
+
+Metric: Peak CPU (%)
+Plot type: Multi-line
+Category: Dynamic
+Benchmarks: 11
