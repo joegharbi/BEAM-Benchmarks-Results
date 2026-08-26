@@ -4,6 +4,20 @@ This repository holds benchmark and energy-measurement outputs for **BEAM ecosys
 
 Data were produced with the [BEAM Web Server Benchmarks Framework](https://github.com/joegharbi/BEAM-web-server-benchmarks). Power and consumption samples were collected with [Scaphandre](https://github.com/hubblo-org/scaphandre).
 
+## Note on the high load HTTP results
+
+The static and dynamic HTTP results in this repository are affected by connection handling in the benchmark client rather than by the servers under test.
+
+The client opens a new TCP connection for every request and does not reuse connections. Servers that implement HTTP connection reuse keep the connection open after responding, which leaves the client to close it. The closing side holds each socket in `TIME_WAIT` for sixty seconds. With 28,232 ephemeral ports available on the measurement host, the client exhausts its port range and requests begin to fail.
+
+The effect is visible in the data here. In every static and dynamic run, successful request counts for the affected targets stop at exactly 28,232, and again at twice that number.
+
+Servers built directly on `gen_tcp`, meaning the Erlang and Elixir lean targets, close each connection themselves. The server holds `TIME_WAIT` and the client is unaffected, which is why those targets report full success. The Gleam lean targets are built on Mist and follow the framework pattern rather than the lean one.
+
+**Verification.** Re-running Erlang Cowboy at 80,000 requests with connection reuse enabled in the client gives 80,000 successes in 48.3 seconds, against 59,949 without. The Elixir `gen_tcp` handler completes 80,000 under both clients, taking 56.8 seconds with reuse. Reproduce with `tools/port_reuse_test.py` in the framework repository.
+
+**Scope.** This affects the interpretation of HTTP results above roughly 20,000 requests in all four run directories listed below. Results below that level and the WebSocket concurrency results are unaffected. Corrected measurements will be published in follow up work.
+
 ## Scope of this repository
 
 - **Focus:** BEAM runtime and framework comparisons (not general-purpose web server shootouts).
